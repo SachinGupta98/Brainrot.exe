@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BRAINROT.exe – the most uselessly fun website on the internet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0714;--panel:#150e24;--line:#2d2050;--lime:#c6ff2e;--pink:#ff3fb4;--purple:#8b5cf6;--text:#f4effd;--mute:#a99bc7;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,#3a1a7a55,transparent),var(--bg);color:var(--text);font:500 16px/1.5 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.bung{font-family:Bungee,Impact,sans-serif;font-weight:400;margin:0}
+button{font:inherit;cursor:pointer;border:0;color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0b0714e6;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#0b0714}
+nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.logo{font-family:Bungee;font-size:20px;color:var(--lime);text-decoration:none;white-space:nowrap}.logo i{color:var(--pink);font-style:normal;font-size:13px}
+nav .links{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav .links a{color:var(--mute);text-decoration:none;padding:6px 10px;border-radius:8px;font-size:14px;white-space:nowrap}
+nav .links a:hover{color:var(--text);background:var(--line)}
+.btn{background:var(--lime);color:#14081f;font-weight:700;padding:12px 20px;border-radius:12px;box-shadow:0 4px 0 #6f9a00;transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #6f9a00}
+.btn.pink{background:var(--pink);color:#fff;box-shadow:0 4px 0 #9b1b6d}.btn.pink:active{box-shadow:0 1px 0 #9b1b6d}
+.btn.ghost{background:transparent;border:2px solid var(--line);box-shadow:none;color:var(--text)}
+.btn.sm{padding:8px 14px;font-size:14px}
+.hero{padding:48px 0 30px;text-align:center;position:relative}
+.hero h1{font-size:clamp(46px,13vw,130px);line-height:.95;color:var(--lime);text-shadow:4px 4px 0 var(--purple),8px 8px 0 #0006;letter-spacing:-1px}
+.hero h1 i{color:var(--pink);font-style:normal;font-size:.5em;text-shadow:3px 3px 0 var(--purple)}
+.tag{display:inline-block;background:var(--purple);transform:rotate(-2deg);padding:6px 18px;margin:18px 0 12px;border-radius:6px;font-weight:700;font-size:clamp(15px,3.6vw,20px)}
+.hero p.sub{max-width:520px;margin:0 auto 22px;color:var(--mute)}
+.stick{position:absolute;font-size:clamp(40px,8vw,84px);animation:bob 3s ease-in-out infinite}
+.s1{left:2%;top:40%}.s2{right:2%;top:38%;animation-delay:-1s}.s3{right:14%;top:2%;font-size:44px;animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-12px) rotate(6deg)}}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;color:var(--mute);font-size:14px}
+.note{position:absolute;background:#fff4a8;color:#2b2200;padding:8px 12px;font-size:13px;font-weight:700;transform:rotate(5deg);box-shadow:3px 3px 0 #0006;max-width:130px}
+.n1{right:6%;top:-6px}.n2{left:6%;top:12px;background:#ffc1e6;transform:rotate(-6deg)}
+section{padding:46px 0 10px}
+h2{font-size:clamp(26px,6vw,40px);margin-bottom:6px}
+h2 em{font-style:normal;color:var(--lime)}
+.lead{color:var(--mute);margin:0 0 22px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.card.l{border-color:#6f9a00}.card.p{border-color:#9b1b6d}.card.v{border-color:#5b3cc4}
+.card h3{font-size:18px;margin-bottom:12px;color:var(--lime)}
+.big{font-family:Bungee;font-size:clamp(48px,14vw,84px);line-height:1;color:var(--pink);text-align:center;margin:10px 0}
+.big.neg{color:var(--pink)}.big.pos{color:var(--lime)}
+.center{text-align:center}.out{background:#0b0714;border:1px solid var(--line);border-radius:12px;padding:16px;min-height:90px;font-size:18px;display:flex;align-items:center}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{background:#0b0714;border:1px solid var(--line);border-radius:99px;padding:6px 14px;color:var(--mute);font-size:14px}
+.tab[aria-selected=true]{background:var(--purple);color:#fff;border-color:var(--purple)}
+.row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.yellow{background:#fff4a8;color:#2b2200;border-radius:6px;padding:18px;transform:rotate(-1.5deg);box-shadow:5px 5px 0 #0006;font-weight:700;font-size:18px}
+textarea{width:100%;background:#0b0714;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px;font:inherit;resize:vertical;min-height:70px}
+.conf{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#0b0714;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px}
+.heart{background:none;color:var(--pink);white-space:nowrap;font-size:14px;font-weight:700}
+.heart.on{color:#fff}
+canvas{width:100%;border-radius:12px;background:#0b0714;border:2px solid var(--line);display:block;touch-action:manipulation}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opt{background:#0b0714;border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-align:left}
+.opt:hover{border-color:var(--lime)}
+.tt{font-size:clamp(22px,5vw,32px);color:var(--lime);line-height:1.1;margin:6px 0}
+ul.clean{list-style:none;margin:0;padding:0}ul.clean li{padding:9px 0;border-bottom:1px dashed var(--line)}
+ul.clean li b{color:var(--lime);font-family:Bungee;font-weight:400;margin-right:8px}
+.share{background:linear-gradient(135deg,#1f0f3d,#3a0d33);border:2px solid var(--purple);border-radius:20px;padding:24px;text-align:center}
+.share .big{margin:6px 0}.share small{color:var(--mute)}
+footer{margin-top:60px;border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mute);text-align:center;font-size:14px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--lime);color:#14081f;font-weight:700;padding:10px 18px;border-radius:99px;opacity:0;pointer-events:none;transition:.25s;z-index:40;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:640px){.note,.s3{display:none}.stick{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.stick{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#home">BRAINROT<i>.exe</i></a>
+<div class="links"><a href="#home">Home</a><a href="#aura">Random</a><a href="#generators">Generators</a><a href="#challenges">Challenges</a><a href="#wall">Wall</a><a href="#games">Games</a><a href="#npc">NPC Type</a><a href="#daily">Daily</a></div>
+<button class="btn pink sm" id="bored">I’m Bored</button>
+</div></nav>
+
+<header class="wrap hero" id="home">
+<div class="note n2">overthinking since birth</div><div class="note n1">good grades? optional. vibes? mandatory.</div>
+<span class="stick s1" aria-hidden="true">🦆</span><span class="stick s2" aria-hidden="true">🐕</span><span class="stick s3" aria-hidden="true">👑</span>
+<h1>BRAINROT<i>.exe</i></h1>
+<div class="tag">Random stuff. Zero productivity. 100% vibes.</div>
+<p class="sub">A chaotic playground of random generators, silly challenges, absurd scenarios and shareable results that make you go “wtf” and immediately send it to your friends.</p>
+<div class="row" style="justify-content:center"><button class="btn" id="chaos">Do something random</button><a class="btn ghost" href="#features" style="text-decoration:none">What is this? (idk)</a></div>
+<div class="chips"><span>🚫 No sign up needed</span><span>🆓 Totally free</span><span>🥱 Made for bored humans</span></div>
+</header>
+
+<main class="wrap" id="features">
+<section id="aura"><h2>1. Random <em>button</em></h2><p class="lead">One click. Anything can happen.</p>
+<div class="card l center"><div class="bung" style="font-size:14px;color:var(--mute)">YOUR AURA TODAY:</div>
+<div class="big neg" id="auraN">-9000</div><p id="auraR" style="margin:0 0 16px">Even the Wi-Fi disconnects when you enter the room.</p>
+<button class="btn" id="auraB">Again please</button></div></section>
+
+<section id="generators"><h2>2. Brainrot <em>generators</em></h2><p class="lead">Generate the most useless (but funny) things.</p>
+<div class="card v"><div class="tabs" role="tablist" id="genTabs"></div>
+<div class="out" id="genOut" aria-live="polite">Pick a tab and hit generate.</div>
+<div class="row"><button class="btn pink" id="genB">Generate another</button><button class="btn ghost" id="genC">Copy</button></div></div></section>
+
+<section id="challenges"><h2>3. Chaotic <em>challenges</em></h2><p class="lead">Short, silly challenges to break boredom.</p>
+<div class="grid"><div class="yellow"><div style="font-size:13px;opacity:.7">TODAY’S CHALLENGE:</div><div id="chTxt" style="margin:8px 0 14px">Say “skill issue” in a normal conversation.</div>
+<button class="btn sm" id="chDone" style="background:#2b2200;color:#fff;box-shadow:none">Done (or maybe later)</button> <button class="btn sm ghost" id="chNew" style="color:#2b2200;border-color:#2b2200">New one</button></div>
+<div class="card p center"><div class="bung" style="font-size:14px;color:var(--mute)">CHALLENGES COMPLETED</div><div class="big pos" id="chCount">0</div><p style="margin:0;color:var(--mute)" id="chMsg">Zero? Bold strategy.</p></div></div></section>
+
+<section id="wall"><h2>4. Confession <em>wall</em></h2><p class="lead">Anonymous and hilarious confessions. Stored only in your browser.</p>
+<div class="card p"><textarea id="cIn" maxlength="140" placeholder="Spill it… (max 140 characters)" aria-label="Your confession"></textarea>
+<div class="row"><button class="btn pink" id="cPost">Post anonymously</button></div><div id="cList"></div></div></section>
+
+<section id="games"><h2>5. Brainrot <em>games</em></h2><p class="lead">Quick browser game for instant fun. Tap, click or press Space to jump.</p>
+<div class="card l"><div class="row" style="justify-content:space-between;margin:0 0 10px"><b>Score: <span id="gS">0</span></b><b>Best: <span id="gB">0</span></b></div>
+<canvas id="cv" width="640" height="180" aria-label="Jump over your responsibilities game"></canvas>
+<p class="center" style="color:var(--mute);margin:10px 0 0" id="gMsg">Tap the game to start. Jump over your responsibilities.</p></div></section>
+
+<section id="npc"><h2>6. What’s your <em>NPC type?</em></h2><p class="lead">A very unserious personality result.</p>
+<div class="card v" id="qBox"></div></section>
+
+<section id="daily"><h2>7. Daily <em>dose</em></h2><p class="lead">A new random collection every day.</p>
+<div class="card p"><div class="bung" style="color:var(--lime);margin-bottom:6px">Today’s Brainrot Pack</div><ul class="clean" id="dList"></ul></div></section>
+
+<section id="share"><h2>8. Share <em>everything</em></h2><p class="lead">Every result is made to be shared. Do a feature above and your latest result shows up here.</p>
+<div class="share"><div class="bung" style="color:var(--lime)">BRAINROT.exe</div><small id="shT">MY AURA TODAY:</small>
+<div class="big" id="shB">-9000</div><p id="shS" style="margin:0 0 18px">Even the Wi-Fi disconnects when you enter the room.</p>
+<div class="row" style="justify-content:center"><button class="btn pink" id="shW">Share on WhatsApp</button><button class="btn ghost" id="shX">Post on X</button><button class="btn ghost" id="shC">Copy text</button><button class="btn ghost" id="shD">Download card</button></div></div></section>
+</main>
+<footer>BRAINROT.exe · Made with zero productivity. Touch grass (nah).</footer>
+<div id="toast" role="status"></div>
+
+<script>
+const $=s=>document.querySelector(s),pick=a=>a[Math.floor(Math.random()*a.length)];
+const store={get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),2200)}
+let last={t:"MY AURA TODAY:",b:"-9000",s:"Even the Wi-Fi disconnects when you enter the room.",c:"neg"};
+function setLast(t,b,s,c){last={t,b,s,c};$("#shT").textContent=t;const e=$("#shB");e.textContent=b;e.style.color=c==="pos"?"var(--lime)":"var(--pink)";$("#shS").textContent=s}
+
+/* 1. aura */
+const auraWhy=["Even the Wi-Fi disconnects when you enter the room.","You said “5 mins” and vanished for 2 hours.","You laughed at your own joke before the punchline.","Your phone is at 1% and you still opened Instagram.","You waved back at someone who wasn’t waving at you.","You studied for 10 minutes and told everyone about it.","You held the door and nobody said thanks. Respect.","You wore the same hoodie 4 days straight. Legendary."];
+function aura(){const n=Math.round((Math.random()*2-1)*9999),e=$("#auraN");e.textContent=(n>0?"+":"")+n;e.className="big "+(n<0?"neg":"pos");const r=pick(auraWhy);$("#auraR").textContent=r;setLast("MY AURA TODAY:",e.textContent,r,n<0?"neg":"pos")}
+$("#auraB").onclick=aura;
+
+/* 2. generators */
+const G={Excuse:["My dog ate my homework and then got a job because he’s more responsible than me.","My alarm rang. I just didn’t believe in it.","The Wi-Fi was in its villain arc.","I was about to start but my laptop needed emotional support.","I did the homework in a dream. Sadly, no screenshots.","My pen ran out of motivation, not ink."],
+Roasts:["Your study plan has more tabs open than your brain has working cells.","You have the confidence of a topper and the syllabus knowledge of a loading screen.","Bro bought a new notebook to fix procrastination. It’s decorative now.","You said “last-minute pressure makes diamonds.” Those are just crushed grades.","Your screen time is higher than your marks."],
+Situations:["You’re in an elevator and someone starts a very serious rap battle. You’re the judge.","Your teacher asks “any doubts?” and your only doubt is your life choices.","You find out the group project leader is the guy who joined late and only says “nice”.","You wake up and every notification is just “wyd”.","Your phone autocorrects everything to “bro”. Day 3."],
+"NPC Dialogue":["“Welcome to the village. The shop is closed. The shop is always closed.”","“I used to be an adventurer like you, then I started overthinking.”","“Have you heard? The king lost his charger.”","“Nice weather today. Anyway, I’ll repeat this sentence forever.”","“You look like you need a quest. Anyway, here’s a potato.”"]};
+let gTab="Excuse";const tabs=$("#genTabs");
+Object.keys(G).forEach(k=>{const b=document.createElement("button");b.className="tab";b.role="tab";b.textContent=k;b.onclick=()=>{gTab=k;draw();gen()};tabs.append(b)});
+function draw(){[...tabs.children].forEach(b=>b.setAttribute("aria-selected",b.textContent===gTab))}
+function gen(){const v=pick(G[gTab]);$("#genOut").textContent=v;setLast(gTab.toUpperCase()+" OF THE DAY:","😂",v,"pos")}
+$("#genB").onclick=gen;$("#genC").onclick=()=>copy($("#genOut").textContent);draw();
+function copy(t){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Copied. Now go send it."),()=>toast("Copy blocked. Select the text manually."))}
+
+/* 3. challenges */
+const CH=["Say “skill issue” in a normal conversation.","Talk like an NPC for 5 minutes.","Text a friend only in emojis for 10 minutes.","Do your next task while standing on one leg.","Give a dramatic 15-second speech about your pen.","Say “nice aura” to a stranger. Record the reaction (optional).","Walk into the next room like it’s a boss entrance.","Explain your day like a sports commentator."];
+let done=store.get("br_done",0);
+function chShow(){$("#chCount").textContent=done;$("#chMsg").textContent=done===0?"Zero? Bold strategy.":done<5?"Okay, we see you.":"Certified chaos agent."}
+$("#chNew").onclick=()=>{$("#chTxt").textContent=pick(CH)};
+$("#chDone").onclick=()=>{done++;store.set("br_done",done);chShow();setLast("CHALLENGES COMPLETED:",String(done),$("#chTxt").textContent,"pos");toast("+1 aura (probably)");$("#chTxt").textContent=pick(CH)};chShow();
+
+/* 4. confessions */
+let conf=store.get("br_conf",[{t:"I pretended to lag in an online test but actually didn’t know the answer.",h:2400},{t:"Am I the only one who talks to myself during study and then argues with myself?",h:1800},{t:"I say “5 mins” and then disappear for 2 hours. It’s a talent.",h:900}]);
+function cDraw(){const l=$("#cList");l.textContent="";conf.forEach((c,i)=>{const d=document.createElement("div");d.className="conf";const p=document.createElement("span");p.textContent=c.t;const b=document.createElement("button");b.className="heart"+(c.m?" on":"");b.textContent="♥ "+c.h;b.setAttribute("aria-label","Like confession");b.onclick=()=>{if(c.m){c.m=0;c.h--}else{c.m=1;c.h++}store.set("br_conf",conf);cDraw()};d.append(p,b);l.append(d)})}
+$("#cPost").onclick=()=>{const v=$("#cIn").value.trim();if(!v){toast("Type something first. Even a lie works.");return}conf.unshift({t:v,h:0});store.set("br_conf",conf);$("#cIn").value="";cDraw();toast("Posted. No one knows it’s you.")};cDraw();
+
+/* 5. game */
+const cv=$("#cv"),x=cv.getContext("2d"),GY=150;let st="idle",pl,obs,sc,spd,fr,best=store.get("br_best",0);$("#gB").textContent=best;
+function reset(){pl={y:GY-28,v:0};obs=[];sc=0;spd=5;fr=0}
+function jump(){if(st==="idle"||st==="over"){reset();st="run";$("#gMsg").textContent="Jump over your responsibilities!";loop();return}if(pl.y>=GY-28)pl.v=-12.5}
+function loop(){if(st!=="run")return;fr++;pl.v+=.7;pl.y=Math.min(GY-28,pl.y+pl.v);if(pl.y>=GY-28)pl.v=0;
+ if(fr%Math.max(45,95-sc/8|0)===0)obs.push({x:640,w:16+Math.random()*14,h:28+Math.random()*26});
+ obs.forEach(o=>o.x-=spd);obs=obs.filter(o=>o.x>-40);spd=5+sc/200;sc++;
+ for(const o of obs){if(60+26>o.x&&60<o.x+o.w&&pl.y+28>GY-o.h){st="over";if(sc>best){best=sc;store.set("br_best",best);$("#gB").textContent=best}$("#gMsg").textContent="Game over. Tap to retry.";setLast("BRAINROT GAME SCORE:",String(sc),"Jumped over my responsibilities (until I didn’t).","pos")}}
+ $("#gS").textContent=sc;paint();requestAnimationFrame(loop)}
+function paint(){x.clearRect(0,0,640,180);x.fillStyle="#2d2050";x.fillRect(0,GY,640,3);
+ x.fillStyle="#c6ff2e";obs&&obs.forEach(o=>{x.fillRect(o.x,GY-o.h,o.w,o.h);x.fillRect(o.x-8,GY-o.h*.7,8,6);x.fillRect(o.x+o.w,GY-o.h*.5,8,6)});
+ if(pl){x.fillStyle="#ff3fb4";x.fillRect(60,pl.y,26,28);x.fillStyle="#0b0714";x.fillRect(66,pl.y+8,16,6);x.fillStyle="#fff";x.fillRect(68,pl.y+9,4,3)}
+ if(st==="over"){x.fillStyle="#0b0714b0";x.fillRect(0,0,640,180);x.fillStyle="#ff3fb4";x.font="28px Bungee,sans-serif";x.textAlign="center";x.fillText("SKILL ISSUE",320,95)}}
+reset();paint();cv.addEventListener("pointerdown",jump);
+addEventListener("keydown",e=>{if(e.code==="Space"&&document.activeElement===document.body||e.code==="Space"&&document.activeElement===cv){e.preventDefault();const r=cv.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)jump()}});
+
+/* 6. NPC quiz */
+const TY=[{n:"THE LAST-BENCH FINAL BOSS",d:"Pro at procrastination. Says “I’ll study tomorrow”. Knows all memes. Still somehow survives."},{n:"THE 2 AM PANIC TOPPER",d:"Zero effort till midnight, full genius at 2 AM. Powered by chai and fear."},{n:"THE HIGHLIGHTER ADDICT",d:"Notes look like a rainbow. Revision count: none."},{n:"THE GROUP-CHAT PHILOSOPHER",d:"Has opinions on everything. Syllabus not included."}];
+const Q=[["Exam in 3 days. You…",["Start a new notebook","Sleep, it’s far","Make a perfect timetable","Text the group: “kuch hua?”"]],["Your phone battery is at 5%. You…",["Open reels","Panic-charge while studying","Colour-code the charger","Voice-note a 4-min thought"]],["Teacher says “any doubts?”",["Stare at the wall","Hide behind the front bencher","Ask nothing, highlight everything","Ask a deep unrelated question"]],["Your study snack is…",["Whatever is near the bed","Maggi at 1:47 AM","Neatly packed and labelled","Chai and long conversations"]],["Your biggest superpower is…",["Surviving anyway","Last-minute genius","Aesthetic notes","Never being quiet"]]];
+const map=[[1,2,3,0],[0,1,2,3],[1,0,2,3],[0,1,2,3],[0,1,2,3]];let qi=0,tal=[0,0,0,0];
+function qDraw(){const b=$("#qBox");b.textContent="";if(qi>=Q.length){const w=tal.indexOf(Math.max(...tal)),t=TY[w],a=document.createElement("div");a.innerHTML='<div class="bung" style="color:var(--mute);font-size:14px">YOU ARE…</div><div class="bung tt"></div><p></p>';a.children[1].textContent=t.n;a.children[2].textContent=t.d;const r=document.createElement("div");r.className="row";r.innerHTML='<button class="btn pink">Share my result</button><button class="btn ghost">Retake</button>';r.children[0].onclick=()=>{setLast("YOU ARE…",t.n,t.d,"pos");$("#shB").style.fontSize="clamp(26px,6vw,44px)";$("#share").scrollIntoView()};r.children[1].onclick=()=>{qi=0;tal=[0,0,0,0];qDraw()};a.append(r);b.append(a);setLast("YOU ARE…",t.n,t.d,"pos");return}
+ const h=document.createElement("div");h.innerHTML='<div class="bung" style="font-size:14px;color:var(--mute)"></div><h3 style="color:var(--text);margin-top:8px"></h3><div class="opts"></div>';h.children[0].textContent="Question "+(qi+1)+" of "+Q.length;h.children[1].textContent=Q[qi][0];
+ Q[qi][1].forEach((o,i)=>{const e=document.createElement("button");e.className="opt";e.textContent=o;e.onclick=()=>{tal[map[qi][i]]++;qi++;qDraw()};h.children[2].append(e)});b.append(h)}
+qDraw();
+
+/* 7. daily */
+function seedRng(){const d=new Date(),s=d.getFullYear()*372+d.getMonth()*31+d.getDate();return n=>(s*9301+n*49297)%233280/233280}
+const P=[["Ducks have waterproof feathers, but your excuses don’t. (maybe fake)","Octopuses have three hearts and still can’t text back. (maybe fake)","Honey never expires. Your motivation does. (maybe fake)"],["Would you rather study 4 hours straight or watch 4 hours of someone else studying?","Would you rather lose your charger or your headphones forever?","Would you rather have no Wi-Fi or no snacks for a week?"],["When the teacher says “this won’t come in the exam”.","Me: “I’ll start at 6.” Clock: 6:01.","POV: the group project has one worker (you)."],["Stare at a wall for 10 seconds without laughing.","Say “bruh” in 5 different tones.","Walk 20 steps like a sigma on a red carpet."],["“Success is 1% talent, 99% pretending you read the chapter.”","“Sleep is temporary, backlog is forever.”","“Believe in yourself. Also, believe in the deadline.”"]];
+const L=["A weird fact","A cursed would-you-rather","A random meme","A 10-second challenge","A motivational quote (ironically)"],r=seedRng();
+P.forEach((a,i)=>{const li=document.createElement("li");const b=document.createElement("b");b.textContent=i+1;li.append(b,L[i]+": "+a[Math.floor(r(i+1)*a.length)]);$("#dList").append(li)});
+
+/* 8. share */
+function txt(){return "BRAINROT.exe — "+last.t+" "+last.b+" — "+last.s+" Try yours:"}
+const url=()=>location.href.split("#")[0];
+$("#shW").onclick=()=>open("https://wa.me/?text="+encodeURIComponent(txt()+" "+url()),"_blank","noopener");
+$("#shX").onclick=()=>open("https://twitter.com/intent/tweet?text="+encodeURIComponent(txt())+"&url="+encodeURIComponent(url()),"_blank","noopener");
+$("#shC").onclick=()=>copy(txt()+" "+url());
+$("#shD").onclick=()=>{const c=document.createElement("canvas");c.width=c.height=1080;const g=c.getContext("2d");g.fillStyle="#0b0714";g.fillRect(0,0,1080,1080);g.strokeStyle="#8b5cf6";g.lineWidth=10;g.strokeRect(30,30,1020,1020);g.textAlign="center";
+ const wrap=(t,y,f,col,lh,mw)=>{g.font=f;g.fillStyle=col;let line="",yy=y;t.split(" ").forEach(w=>{const tl=line+w+" ";if(g.measureText(tl).width>mw&&line){g.fillText(line.trim(),540,yy);line=w+" ";yy+=lh}else line=tl});g.fillText(line.trim(),540,yy);return yy};
+ wrap("BRAINROT.exe",150,"64px Bungee,Impact,sans-serif","#c6ff2e",70,900);wrap(last.t,280,"36px 'Space Grotesk',sans-serif","#a99bc7",44,900);
+ const e=wrap(last.b,470,(last.b.length>8?"84px":"170px")+" Bungee,Impact,sans-serif",last.c==="pos"?"#c6ff2e":"#ff3fb4",96,920);
+ wrap(last.s,e+110,"40px 'Space Grotesk',sans-serif","#f4effd",52,860);wrap("the most uselessly fun website on the internet",1010,"28px 'Space Grotesk',sans-serif","#ff3fb4",34,900);
+ c.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="brainrot-result.png";a.click();toast("Card downloaded.")})};
+
+/* hero + bored */
+function chaos(){const acts=[()=>{aura();$("#aura").scrollIntoView()},()=>{gTab=pick(Object.keys(G));draw();gen();$("#generators").scrollIntoView()},()=>{$("#chTxt").textContent=pick(CH);$("#challenges").scrollIntoView()},()=>$("#wall").scrollIntoView(),()=>$("#games").scrollIntoView(),()=>$("#npc").scrollIntoView()];pick(acts)();toast(pick(["You could be productive. Instead:","NPC behaviour detected.","Loading chaos…","Brain cells: 3. Vibes: 100."]))}
+$("#chaos").onclick=chaos;$("#bored").onclick=chaos;gen();aura();
+</script>
+</body>
+</html>
